@@ -22,17 +22,6 @@ if not camera or not camera.isOpened():
 
 print("ESC → 종료 / Space → 가위바위보")
 
-# 승패 판정 함수
-def judge(player, computer):
-    if player == computer:
-        return "비김!"
-    elif (player == "가위" and computer == "보") or \
-         (player == "바위" and computer == "가위") or \
-         (player == "보" and computer == "바위"):
-        return "플레이어 승리!"
-    else:
-        return "컴퓨터 승리!"
-
 while True:
     ret, frame = camera.read()
     if not ret:
